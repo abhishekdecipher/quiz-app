@@ -11,6 +11,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping(Constants.BASE)
+@CrossOrigin
 public class TodoResource {
 
     @Autowired
@@ -37,8 +38,8 @@ public class TodoResource {
          todoService.deleteTodo(todoId);
     }
 
-    @DeleteMapping("/deleteMultipleTodos")
-    public void deleteMultipleTodos(@RequestBody final List<Long> todoList){
+    @DeleteMapping("/deleteMultipleTodos/{todoList}")
+    public void deleteMultipleTodos(@PathVariable final List<Long> todoList){
          todoService.deleteMultipleTodos(todoList);
     }
 
