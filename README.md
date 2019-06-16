@@ -1,4 +1,4 @@
-#Steps for running the project
+# Steps for running the project
 
 1. Just run this spring boot application.
 
